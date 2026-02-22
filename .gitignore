@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.DS_Store
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+.venv/
+.venv*/
+venv/

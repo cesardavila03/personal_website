@@ -1,4 +1,4 @@
-import aboutPortrait from '../assets/hero/cesar-portrait-casual.png';
+import aboutPortrait from '../assets/hero/cesar-about-portrait.jpg';
 
 export default function AboutSection() {
   return (
@@ -16,13 +16,15 @@ export default function AboutSection() {
 
           <div className="about-bio reveal">
             <p>
-              I transitioned from consulting into software engineering with a clear mission: build systems that work
-              harder than the people using them. My focus is backend development, automation, and financial tools
-              that scale.
+              I transitioned from consulting into software engineering with a
+              clear mission: build systems that work harder than the people
+              using them. My focus is backend development, automation, and
+              financial tools that scale.
             </p>
             <p>
-              From designing CI/CD pipelines to building ML-informed workflows, I enjoy creating infrastructure that
-              stays reliable, efficient, and maintainable under real-world pressure.
+              From designing CI/CD pipelines to building ML-informed workflows,
+              I enjoy creating infrastructure that stays reliable, efficient,
+              and maintainable under real-world pressure.
             </p>
           </div>
         </div>

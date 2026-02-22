@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d frontend/dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

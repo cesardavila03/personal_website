@@ -3,6 +3,7 @@ import cssLogo from '../assets/logos/css3.svg';
 import fastApiLogo from '../assets/logos/fastapi.svg';
 import gitLogo from '../assets/logos/git.svg';
 import githubActionsLogo from '../assets/logos/github-actions.svg';
+import githubCopilotLogo from '../assets/logos/github-copilot.svg';
 import goLogo from '../assets/logos/go.svg';
 import htmlLogo from '../assets/logos/html5.svg';
 import javascriptLogo from '../assets/logos/javascript.svg';
@@ -11,6 +12,9 @@ import postgresqlLogo from '../assets/logos/postgresql.svg';
 import pytestLogo from '../assets/logos/pytest.svg';
 import pythonLogo from '../assets/logos/python.svg';
 import reactLogo from '../assets/logos/react.svg';
+import codexLogo from '../assets/logos/codex.svg';
+import claudeLogo from '../assets/logos/claude.svg';
+import windsurfLogo from '../assets/logos/windsurf.svg';
 
 const LOGO_BY_SKILL = {
   Python: pythonLogo,
@@ -30,8 +34,15 @@ const LOGO_BY_SKILL = {
 
 const SKILL_GROUPS = {
   languages: ['Python', 'JavaScript', 'React', 'Go', 'SQL', 'HTML', 'CSS'],
-  technologies: ['FastAPI', 'AWS', 'REST APIs', 'Pytest', 'CI/CD', 'Git'],
+  technologies: ['AWS', 'Git', 'FastAPI', 'REST APIs', 'Pytest', 'CI/CD'],
 };
+
+const AI_TOOLS = [
+  { label: 'Claude Code', logo: claudeLogo },
+  { label: 'Windsurf', logo: windsurfLogo, darkInvert: true },
+  { label: 'GitHub Copilot', logo: githubCopilotLogo, darkInvert: true },
+  { label: 'Codex', logo: codexLogo },
+];
 
 export default function SkillsSection() {
   return (
@@ -92,6 +103,27 @@ export default function SkillsSection() {
                   </li>
                 );
               })}
+            </ul>
+          </div>
+
+          <div className="skills-group reveal">
+            <h3>AI Tooling</h3>
+            <ul className="skills-pills" aria-label="AI tooling">
+              {AI_TOOLS.map((tool, index) => (
+                <li style={{ transitionDelay: `${index * 35}ms` }} className="reveal" key={tool.label}>
+                  <span className="skill-pill-content">
+                    <img
+                      src={tool.logo}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                      aria-hidden="true"
+                      className={tool.darkInvert ? 'logo-invert-dark' : undefined}
+                    />
+                    <span>{tool.label}</span>
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

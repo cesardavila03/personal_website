@@ -2,18 +2,9 @@ import { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
 import HeroImageReveal from '../components/HeroImageReveal';
 import basePortrait from '../assets/hero/cesar-portrait-casual.png';
-import overlayPortrait from '../assets/hero/cesar-portrait-helmet.png';
 
 export default function HeroSection() {
   const [offsetY, setOffsetY] = useState(0);
-  // Calibration for different source dimensions (casual: 1183x1479, helmet: 992x1056).
-  const overlayAdjust = { x: 0, y: 0, scale: 1.175 };
-  const trailConfig = {
-    lingerMs: 550,
-    spawnIntervalMs: 22,
-    maxStamps: 24,
-    stampRadiusPx: 63,
-  };
 
   useEffect(() => {
     const onScroll = () => {
@@ -45,10 +36,7 @@ export default function HeroSection() {
         <div className="hero-visual">
           <HeroImageReveal
             baseSrc={basePortrait}
-            overlaySrc={overlayPortrait}
             alt="Portrait of Cesar Davila"
-            overlayAdjust={overlayAdjust}
-            trailConfig={trailConfig}
           />
         </div>
       </div>

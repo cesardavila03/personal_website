@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { ArrowDown } from 'lucide-react';
-import HeroImageReveal from '../components/HeroImageReveal';
 import basePortrait from '../assets/hero/cesar-portrait-casual.png';
 
 export default function HeroSection() {
@@ -34,10 +33,14 @@ export default function HeroSection() {
           </a>
         </div>
         <div className="hero-visual">
-          <HeroImageReveal
-            baseSrc={basePortrait}
-            alt="Portrait of Cesar Davila"
-          />
+          <figure className="hero-reveal">
+            <img
+              className="hero-reveal-base"
+              src={basePortrait}
+              alt="Portrait of Cesar Davila"
+              draggable="false"
+            />
+          </figure>
         </div>
       </div>
       <a

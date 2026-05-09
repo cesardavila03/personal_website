@@ -4,6 +4,9 @@ import texasLonghornsLogo from '../assets/logos/texas-longhorns.svg';
 import freeCodeCampLogo from '../assets/logos/freeCodeCamp.svg';
 import harvardLogo from '../assets/logos/harvard.svg';
 import oracleNetsuiteLogo from '../assets/logos/oracle-netsuite.svg';
+import awsCertifiedSolutionsArchitectAssociateBadge from '../assets/logos/aws-certified-solutions-architect-associate.svg';
+
+const CERT_BASE = `${import.meta.env.BASE_URL}certificates/`;
 
 const EDUCATION = [
   {
@@ -18,12 +21,21 @@ const EDUCATION = [
 
 const CERTIFICATIONS = [
   {
+    provider: 'Amazon Web Services',
+    title: 'AWS Certified Solutions Architect - Associate',
+    logo: awsCertifiedSolutionsArchitectAssociateBadge,
+    period: 'Apr 2026',
+    category: 'professional',
+    certificateUrl:
+      'https://www.credly.com/badges/a053ac3d-b3af-4391-8072-e759416cb882/linked_in?t=te5s92',
+  },
+  {
     provider: 'Oracle NetSuite',
     title: 'NetSuite Certified Administrator',
     logo: oracleNetsuiteLogo,
     period: 'Oct 2023',
     category: 'professional',
-    certificateUrl: '/certificates/netsuite-certified-administrator.pdf',
+    certificateUrl: `${CERT_BASE}netsuite-certified-administrator.pdf`,
   },
   {
     provider: 'Oracle NetSuite',
@@ -31,7 +43,7 @@ const CERTIFICATIONS = [
     logo: oracleNetsuiteLogo,
     period: 'Oct 2024',
     category: 'professional',
-    certificateUrl: '/certificates/netsuite-certified-erp-consultant.pdf',
+    certificateUrl: `${CERT_BASE}netsuite-certified-erp-consultant.pdf`,
   },
   {
     provider: 'Oracle NetSuite',
@@ -39,7 +51,7 @@ const CERTIFICATIONS = [
     logo: oracleNetsuiteLogo,
     period: 'Dec 2022',
     category: 'professional',
-    certificateUrl: '/certificates/netsuite-certified-financial-user.pdf',
+    certificateUrl: `${CERT_BASE}netsuite-certified-financial-user.pdf`,
   },
   {
     provider: 'Oracle NetSuite',
@@ -47,7 +59,7 @@ const CERTIFICATIONS = [
     logo: oracleNetsuiteLogo,
     period: 'Jun 2022',
     category: 'professional',
-    certificateUrl: '/certificates/netsuite-certified-suitefoundation.pdf',
+    certificateUrl: `${CERT_BASE}netsuite-certified-suitefoundation.pdf`,
   },
   {
     provider: 'Harvard University',
